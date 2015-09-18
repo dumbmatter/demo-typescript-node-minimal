@@ -5,7 +5,8 @@
   "description": "Minimal demo showing TypeScript use in node.js",
   "main": "index.js",
   "scripts": {
-    "test": "tsc index.ts --module commonjs; node ./index"
+    "postinstall": "tsd install",
+    "test": "tsc index.ts --module commonjs && node ./index"
   },
   "keywords": [
     "typescript",
@@ -20,10 +21,10 @@
     "url": "https://github.com/Bartvds"
   },
   "license": "MIT",
-  "devDependencies": {
-    "bluebird": "^1.2.4"
-  },
   "dependencies": {
+    "pubsub-js": "^1.5.2",
+    "tsd": "^0.6.4",
+    "typescript": "^1.6.2",
     "xregexp": "^2.0.0"
   }
 }
